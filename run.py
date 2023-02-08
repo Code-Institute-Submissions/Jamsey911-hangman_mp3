@@ -75,6 +75,7 @@ while len(my_word) < 3:
     my_word = str(my_word).strip("\r")
     my_word = str(my_word).upper()
     print(my_word)
+    print(my_word[0])
     
 
 # """
@@ -91,7 +92,7 @@ current_guess = "-" * len(my_word)
 
 wrong_guesses = 0
 
-# used letter tracker 
+# used letter tracker
 used_letters = []
 
 # Main loop
@@ -99,40 +100,48 @@ print("Welcome to Hangman")
 print("Try to guess the word")
 
 while wrong_guesses < LIVES and current_guess != my_word:
-    print(HANGMAN[wrong_guesses])
-    print("You've used the following letters: ", used_letters)
-    print("So far, the word is:", current_guess)
+    try:
+        print(HANGMAN[wrong_guesses])
+        print("You've used the following letters: ", used_letters)
+        print("So far, the word is:", current_guess)
 
-    guess = input("Select a letter:")
-    guess = guess.upper()
-    print(guess)
+        guess = input("Select a letter:")
+        guess = guess.upper()
+        print(guess)
+    except ValueError:
+        print('Not a number')
 
-# Check letter 
-while guess in used_letters:
-    print("You've already guessed that letter:", guess)
-    guess = input("Enter your guess:")
-    guess = guess.upper()
+    # Check letter
+    while guess in used_letters and guess.isalpha():
+        try:
+            print("You've already guessed that letter:", guess)
+            guess = input("Enter your guess:")
+            guess = guess.upper()
+        except ValueError:
+            print('Not a number')
 
 
 # Add new guessed letter to list of guessed letters
-used_letters.append(guess)
-print(used_letters)
+    used_letters.append(guess)
+    print(used_letters)
 
-if guess in my_word:
-    print("You've guessed correctly")
+    if guess in my_word:
+        print("You've guessed correctly")
 
-    # Give a new version of the word mixed letters and dashs 
+        # Give a new version of the word mixed letters and dashs 
 
-    new_current_guess = ""
-    for letter in range(len(my_word)):
-        if guess == my_word[letter]:
-            new_current_guess += guess
-        else:
-            new_current_guess += current_guess[letter]
+        new_current_guess = ""
+        for letter in range(len(my_word)):
+            if guess == my_word[letter]:
+                new_current_guess += guess
+            else:
+                new_current_guess += current_guess[letter]
 
-    current_guess = new_current_guess
-else:
-    print("That was incorrect")
+        current_guess = new_current_guess
+        print(new_current_guess)
+    else:
+        print("That was incorrect")
+        wrong_guesses += 1
 
 # End of game
 if wrong_guesses == LIVES:
@@ -142,6 +151,3 @@ if wrong_guesses == LIVES:
 
 else:
     print("You've Won!")
-
-
-print(used_letters)
