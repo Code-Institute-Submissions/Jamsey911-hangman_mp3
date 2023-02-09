@@ -69,7 +69,7 @@ my_word = 'a'
 while len(my_word) < 3:
     # makes sure word is at least 3 letters long
     my_word = random.choice(WORDS)
-    my_word = str(my_word).strip('[]')
+    my_word = str(my_word).strip("[]")
     my_word = str(my_word).strip("''")
     my_word = str(my_word).strip("\n")
     my_word = str(my_word).strip("\r")
@@ -100,25 +100,24 @@ print("Welcome to Hangman")
 print("Try to guess the word")
 
 while wrong_guesses < LIVES and current_guess != my_word:
-    try:
-        print(HANGMAN[wrong_guesses])
-        print("You've used the following letters: ", used_letters)
-        print("So far, the word is:", current_guess)
+    print(HANGMAN[wrong_guesses])
+    print("You've used the following letters: ", used_letters)
+    print("So far, the word is:", current_guess)
 
-        guess = input("Select a letter:")
+    guess = input("Select a letter:")
+    if len(guess) == 1 and guess.isalpha():
         guess = guess.upper()
         print(guess)
-    except ValueError:
-        print('Not a number')
+    else:
+        print("Incorrect entry, please select a single letter.")
+        continue
+    print(guess)
 
-    # Check letter
-    while guess in used_letters and guess.isalpha():
-        try:
-            print("You've already guessed that letter:", guess)
-            guess = input("Enter your guess:")
-            guess = guess.upper()
-        except ValueError:
-            print('Not a number')
+
+# Check letter
+    while guess in used_letters:
+        print("You've already guessed that letter:", guess)
+        guess = input("Enter your guess:")
 
 
 # Add new guessed letter to list of guessed letters
