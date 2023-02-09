@@ -1,5 +1,5 @@
-""" 
-Hangman Game: Computer picks word from a list and user 
+"""
+Hangman Game: Computer picks word from a list and user
 has to guess the letters in the word.
 User has 6 chances before game over.
 """
@@ -76,7 +76,7 @@ while len(my_word) < 3:
     my_word = str(my_word).upper()
     print(my_word)
     print(my_word[0])
-    
+
 
 # """
 # Lives generated for user to abide by
@@ -109,7 +109,7 @@ while wrong_guesses < LIVES and current_guess != my_word:
         guess = guess.upper()
         print(guess)
     else:
-        print("Incorrect entry, please select a single letter.")
+        print(guess + " is an incorrect entry, please select a single letter.")
         continue
     print(guess)
 
@@ -127,7 +127,7 @@ while wrong_guesses < LIVES and current_guess != my_word:
     if guess in my_word:
         print("You've guessed correctly")
 
-        # Give a new version of the word mixed letters and dashs 
+        # Give a new version of the word mixed letters and dashs
 
         new_current_guess = ""
         for letter in range(len(my_word)):
