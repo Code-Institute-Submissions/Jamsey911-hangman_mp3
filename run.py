@@ -6,6 +6,7 @@ User has 6 chances before game over.
 
 # Import Random
 import random
+import os
 
 # Constants
 HANGMAN = ['''
@@ -74,8 +75,6 @@ while len(my_word) < 3:
     my_word = str(my_word).strip("\n")
     my_word = str(my_word).strip("\r")
     my_word = str(my_word).upper()
-    print(my_word)
-    print(my_word[0])
 
 
 # """
@@ -106,28 +105,31 @@ while wrong_guesses < LIVES and current_guess != my_word:
 
     guess = input("Select a letter:")
     if len(guess) == 1 and guess.isalpha():
+        os.system("clear")
         guess = guess.upper()
-        print(guess)
     else:
+        os.system("clear")
         print(guess + " is an incorrect entry, please select a single letter.")
         continue
-    print(guess)
 
 
 # Check letter
     while guess in used_letters:
         print("You've already guessed that letter:", guess)
+        print(HANGMAN[wrong_guesses])
+        print("You've used the following letters: ", used_letters)
         guess = input("Enter your guess:")
+        os.system("clear")
 
 
 # Add new guessed letter to list of guessed letters
     used_letters.append(guess)
-    print(used_letters)
+    # print(used_letters)
 
     if guess in my_word:
         print("You've guessed correctly")
 
-        # Give a new version of the word mixed letters and dashs
+        # Calcalate lives to add to lives
 
         new_current_guess = ""
         for letter in range(len(my_word)):
