@@ -97,16 +97,22 @@ used_letters = []
 # Main loop
 print("Welcome to Hangman")
 print("Try to guess the word")
+print(my_word)
 
 while wrong_guesses < LIVES and current_guess != my_word:
     print(HANGMAN[wrong_guesses])
     print("You've used the following letters: ", used_letters)
     print("So far, the word is:", current_guess)
+    print("You have", wrong_guesses, "of 6 guesses left")
 
     guess = input("Select a letter:")
     if len(guess) == 1 and guess.isalpha():
         os.system("clear")
         guess = guess.upper()
+    elif guess.upper() == my_word:
+        os.system("clear")
+        print(HANGMAN[wrong_guesses])
+        break
     else:
         os.system("clear")
         print(guess + " is an incorrect entry, please select a single letter.")
@@ -118,6 +124,7 @@ while wrong_guesses < LIVES and current_guess != my_word:
         print("You've already guessed that letter:", guess)
         print(HANGMAN[wrong_guesses])
         print("You've used the following letters: ", used_letters)
+        print("You have", wrong_guesses, " of 6 guesses left")
         guess = input("Enter your guess:")
         os.system("clear")
 
@@ -151,4 +158,5 @@ if wrong_guesses == LIVES:
     print("The correct word is: ", my_word)
 
 else:
-    print("You've Won!")
+    print("You've Won! The word was", my_word)
+    
