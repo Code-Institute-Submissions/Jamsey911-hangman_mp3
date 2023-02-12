@@ -118,7 +118,7 @@ while wrong_guesses < LIVES and current_guess != my_word:
     print("So far, the word is:", current_guess)
     print("You have", wrong_guesses, "of 8 guesses left")
 
-    guess = input("Select a letter:")
+    guess = input("Select a letter:\n")
     if len(guess) == 1 and guess.isalpha():
         os.system("clear")
         guess = guess.upper()
@@ -139,7 +139,7 @@ while wrong_guesses < LIVES and current_guess != my_word:
         print("You've used the following letters: ", used_letters)
         print("So far, the word is:", current_guess)
         print("You have", wrong_guesses, " of 8 guesses left")
-        guess = input("Enter your guess:")
+        guess = input("Enter your guess:\n")
         os.system("clear")
 
 
