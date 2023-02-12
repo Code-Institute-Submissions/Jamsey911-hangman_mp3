@@ -1,7 +1,7 @@
 """
 Hangman Game: Computer picks word from a list and user
 has to guess the letters in the word.
-User has 6 chances before game over.
+User has 8 chances before game over.
 """
 
 # Import Random
@@ -58,6 +58,20 @@ HANGMAN = ['''
  /|\  |
  / \  |
       |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \_ |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+_/ \_ |
+      |
 =========''']
 
 """
@@ -71,7 +85,6 @@ while len(my_word) < 3:
     # makes sure word is at least 3 letters long
     my_word = random.choice(WORDS)
     my_word = str(my_word).strip("[]")
-    my_word = str(my_word).strip("''")
     my_word = str(my_word).strip("\n")
     my_word = str(my_word).strip("\r")
     my_word = str(my_word).upper()
@@ -103,7 +116,7 @@ while wrong_guesses < LIVES and current_guess != my_word:
     print(HANGMAN[wrong_guesses])
     print("You've used the following letters: ", used_letters)
     print("So far, the word is:", current_guess)
-    print("You have", wrong_guesses, "of 6 guesses left")
+    print("You have", wrong_guesses, "of 8 guesses left")
 
     guess = input("Select a letter:")
     if len(guess) == 1 and guess.isalpha():
@@ -124,7 +137,8 @@ while wrong_guesses < LIVES and current_guess != my_word:
         print("You've already guessed that letter:", guess)
         print(HANGMAN[wrong_guesses])
         print("You've used the following letters: ", used_letters)
-        print("You have", wrong_guesses, " of 6 guesses left")
+        print("So far, the word is:", current_guess)
+        print("You have", wrong_guesses, " of 8 guesses left")
         guess = input("Enter your guess:")
         os.system("clear")
 
@@ -159,4 +173,3 @@ if wrong_guesses == LIVES:
 
 else:
     print("You've Won! The word was", my_word)
-    
