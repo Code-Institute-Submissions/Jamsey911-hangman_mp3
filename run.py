@@ -1,6 +1,7 @@
 """
 Hangman Game: Computer picks word from a list and user
-has to guess the letters in the word.
+has to guess the letters in the word or can take a guess
+at the word for 2 lives.
 User has 8 chances before game over.
 """
 
@@ -74,9 +75,16 @@ _/ \_ |
       |
 =========''']
 
+PLAY_AGAIN_MSG = """
+A - PLAY AGAIN
+B - LEADERBOARD
+C - EXIT THE GAME
+"""
+
 """
 List of words for computer to randomize
 """
+# link to word sheet below
 file = open('data.txt', 'r')
 WORDS = file.readlines()
 file.close()
@@ -112,6 +120,7 @@ print("Welcome to Hangman")
 print("Try to guess the word")
 print(MY_WORD)
 
+# Calcaltes how many lives are left
 while WRONG_GUESSES < LIVES and current_guess != MY_WORD:
     print(HANGMAN[WRONG_GUESSES])
     print("You've used the following letters: ", used_letters)
@@ -119,20 +128,24 @@ while WRONG_GUESSES < LIVES and current_guess != MY_WORD:
     print("You have", WRONG_GUESSES, "of 8 guesses left")
 
     guess = input("Select a letter:\n")
+    # Checks if a single letter is entered
     if len(guess) == 1 and guess.isalpha():
         os.system("clear")
         guess = guess.upper()
+    # Changes input to uppercase and checks if letter is in word
     elif guess.upper() == MY_WORD:
         os.system("clear")
         print(HANGMAN[WRONG_GUESSES])
         break
-    elif len(guess) == len(guess) and guess.upper() != MY_WORD:
+    # 2 lives used if a word is incorrect
+    elif len(guess) == len(MY_WORD) and guess.upper() != MY_WORD:
         os.system("clear")
         print(guess + " is incorrect.")
         WRONG_GUESSES += 1
+    # Prompt for an incorrect value
     else:
         os.system("clear")
-        print(guess + " is an incorrect entry, please select a single letter.")
+        print(guess + " is an incorrect entry, please select a single letter or take a guess at the word.")
         continue
 
 
@@ -177,3 +190,4 @@ if WRONG_GUESSES == LIVES:
 
 else:
     print("You've Won! The word was", MY_WORD)
+    print(PLAY_AGAIN_MSG)
