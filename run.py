@@ -15,6 +15,7 @@ import images
 
 PLAY_AGAIN_MSG = """
 A - PLAY AGAIN
+B - GAME RULES
 C - EXIT THE GAME
 """
 
@@ -130,7 +131,11 @@ def MAIN_GAME():
                 os.system("clear")
                 print("You have decided to continue playing the game.")
                 return MAIN_GAME()
-            if user_input == "c":
+            elif user_input == "b":
+                print(images.game_info, "Game Rules")
+                print("Thanks for playing, Hope to see you again soon!")
+                break
+            elif user_input == "c":
                 print("Now closing the game...")
                 print("Thanks for playing, Hope to see you again soon!")
                 break
