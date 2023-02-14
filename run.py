@@ -19,12 +19,9 @@ B - GAME RULES
 C - EXIT THE GAME
 """
 
-"""
-List of words for computer to randomize
-"""
-
 
 def select_word():
+    """List of words for computer to randomize"""
     # link to word sheet below
     file = open('data.txt', 'r')
     WORDS = file.readlines()
@@ -41,6 +38,7 @@ def select_word():
 
 
 def main_game():
+    """Main game loop"""
     word = select_word()
     # Lives generated for user to abide by
     LIVES = len(images.HANGMAN) - 1
