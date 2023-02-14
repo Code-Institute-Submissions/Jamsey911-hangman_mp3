@@ -144,7 +144,8 @@ def end_game():
             play_game = False
         elif continue_playing == "B":
             os.system("clear")
-            print(images.game_info, "Game Rules")
+            rules = str(images.game_info).strip("\n")
+            print(rules, "Game Rules")
         else:
             print("That is not a valid option. Please try again.")
 
