@@ -10,14 +10,13 @@ import random
 import os
 import images
 
-# Constants
-
-
+# Opening page
 PLAY_AGAIN_MSG = """
-A - PLAY AGAIN
+A - PLAY GAME
 B - GAME RULES
 C - EXIT THE GAME
 """
+RULES = str(images.game_info).strip("\n")
 
 
 def select_word():
@@ -96,8 +95,7 @@ def main_game():
             os.system("clear")
             print("You've guessed correctly")
 
-            # Calcalate lives to add to lives
-
+            # Checks if the guessed letter is in the word
             new_current_guess = ""
             for letter in range(len(word)):
                 if guess == word[letter]:
@@ -119,35 +117,30 @@ def game_over(wrong_guesses, word, lives):
     if wrong_guesses == lives:
         print(images.HANGMAN[wrong_guesses])
         print("You've been Hanged! The correct word is: ", word)
-        end_game()
+        start_options()
     else:
         print(images.HANGMAN[wrong_guesses])
         print("You've Won! The word was", word)
-        end_game()
+        start_options()
 
 
-def end_game():
-    """Displays options when the main game is finished"""
+def start_options():
+    """Displays game options screen"""
     play_game = True
     while play_game:
-        continue_playing = input("""
-    A - PLAY AGAIN
-    B - GAME RULES
-    C - EXIT THE GAME
-    """).upper()
+        continue_playing = input(PLAY_AGAIN_MSG).upper()
         if continue_playing == "A":
             os.system("clear")
-            print("You have decided to continue playing the game.")
             return main_game()
         if continue_playing == "C":
             print("Now closing the game...")
             play_game = False
         elif continue_playing == "B":
             os.system("clear")
-            rules = str(images.game_info).strip("\n")
-            print(rules, "Game Rules")
+            print(RULES, "Game Rules")
         else:
             print("That is not a valid option. Please try again.")
 
 
-main_game()
+print(RULES)
+start_options()
