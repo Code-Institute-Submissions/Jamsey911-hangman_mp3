@@ -37,6 +37,11 @@ def select_word():
     return my_word
 
 
+
+
+# used letter tracker
+used_letters = []
+
 def main_game():
     """Main game loop"""
     word = select_word()
@@ -46,11 +51,8 @@ def main_game():
     current_guess = "-" * len(word)
     # Wrong game counter
     wrong_guesses = 0
-    # used letter tracker
-    used_letters = []
     # Main loop
     print("Welcome to Hangman. Try to guess the word")
-    print(word)
 
     # Calcaltes how many lives are left
     while wrong_guesses < lives and current_guess != word:
@@ -111,11 +113,12 @@ def main_game():
             os.system("clear")
             print("That was incorrect")
             wrong_guesses += 1
-    game_over(wrong_guesses, word, lives)
+    end_game()
+    # End of game
+    
 
 
-def game_over(wrong_guesses, word, lives):
-    """Calcalates wrong guesses to guesses left """
+def end_game(wrong_guesses, lives):
     if wrong_guesses == lives:
         print(images.HANGMAN[wrong_guesses])
         print("You've been Hanged! The correct word is: ", word)
@@ -124,29 +127,26 @@ def game_over(wrong_guesses, word, lives):
         print(images.HANGMAN[wrong_guesses])
         print("You've Won! The word was", word)
         end_game()
-
-
-def end_game():
-    """Displays options when the main game is finished"""
-    play_game = True
-    while play_game:
-        continue_playing = input("""
-    A - PLAY AGAIN
-    B - GAME RULES
-    C - EXIT THE GAME
-    """).upper()
-        if continue_playing == "A":
-            os.system("clear")
-            print("You have decided to continue playing the game.")
-            return main_game()
-        if continue_playing == "C":
-            print("Now closing the game...")
-            play_game = False
-        elif continue_playing == "B":
-            os.system("clear")
-            print(images.game_info, "Game Rules")
-        else:
-            print("That is not a valid option. Please try again.")
+        """Displays options when the main game is finished"""
+        play_game = True
+        while play_game:
+            continue_playing = input("""
+        A - PLAY AGAIN
+        B - GAME RULES
+        C - EXIT THE GAME
+        """).upper()
+            if continue_playing == "A":
+                os.system("clear")
+                print("You have decided to continue playing the game.")
+                return main_game()
+            if continue_playing == "C":
+                print("Now closing the game...")
+                play_game = False
+            elif continue_playing == "B":
+                os.system("clear")
+                print(images.game_info, "Game Rules")
+            else:
+                print("That is not a valid option. Please try again.")
 
 
 main_game()
