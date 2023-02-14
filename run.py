@@ -118,51 +118,33 @@ def main_game():
         print(images.HANGMAN[WRONG_GUESSES])
         print("You've been Hanged!")
         print("The correct word is: ", word)
-
+        end_game()
     else:
         print("You've Won! The word was", word)
-        play_game = True
-        while play_game:
-            continue_playing = input("""
-        A - PLAY AGAIN
-        B - GAME RULES
-        C - EXIT THE GAME
-        """)
-            if continue_playing == "a":
-                os.system("clear")
-                print("You have decided to continue playing the game.")
-                return main_game()
-            if continue_playing.lower() == "c":
-                print("Now closing the game...")
-                play_game = False
-            elif continue_playing == "b":
-                os.system("clear")
-                print(images.game_info, "Game Rules")
-            else:
-                print("That is not a valid option. Please try again.")
+        end_game()
 
-        print("Thanks for playing")
+
+def end_game():
+    play_game = True
+    while play_game:
+        continue_playing = input("""
+    A - PLAY AGAIN
+    B - GAME RULES
+    C - EXIT THE GAME
+    """).upper()
+        if continue_playing == "A":
+            os.system("clear")
+            print("You have decided to continue playing the game.")
+            return main_game()
+        if continue_playing == "C":
+            print("Now closing the game...")
+            play_game = False
+        elif continue_playing == "B":
+            os.system("clear")
+            print(images.game_info, "Game Rules")
+        else:
+            print("That is not a valid option. Please try again.")
 
 
 main_game()
-# PLAY_AGAIN_MSG = """
-#         A - PLAY AGAIN
-#         B - GAME RULES
-#         C - EXIT THE GAME
-#         """
-#         user_input = input(PLAY_AGAIN_MSG).lower()
-#         play_game = True
-#         while play_game:
-#             if user_input == "a":
-#                 os.system("clear")
-#                 print("You have decided to continue playing the game.")
-#                 main_game()
-#             elif user_input == "b":
-#                 os.system("clear")
-#                 print(images.game_info, "Game Rules")
-#             elif user_input == "c":
-#                 print("Now closing the game...")
-#                 print("Thanks for playing, Hope to see you again soon!")
-#                 play_game = False
-#             else:
-#                 print("That is not a valid option. Please try again.")
+
