@@ -9,6 +9,10 @@ User has 8 chances before game over.
 import random
 import os
 import images
+import colorama
+from colorama import Fore
+colorama.init(autoreset=True)
+
 
 # Opening page
 PLAY_AGAIN_MSG = """
@@ -96,7 +100,7 @@ def main_game():
 
         if guess in word:
             os.system("clear")
-            print("You've guessed correctly")
+            print(f"{Fore.GREEN}You've guessed correctly")
 
             # Checks if the guessed letter is in the word
             new_current_guess = ""
@@ -110,7 +114,7 @@ def main_game():
             print(new_current_guess)
         else:
             os.system("clear")
-            print("That was incorrect")
+            print(f"{Fore.RED} {guess} is incorrect")
             wrong_guesses += 1
     game_over(wrong_guesses, word, lives)
 
@@ -119,11 +123,11 @@ def game_over(wrong_guesses, word, lives):
     """Calcalates wrong guesses to guesses left """
     if wrong_guesses == lives:
         print(images.HANGMAN[wrong_guesses])
-        print("You've been Hanged! The correct word is: ", word)
+        print(f"{Fore.RED}You've been Hanged! The correct word is: ", word)
         start_options()
     else:
         print(images.HANGMAN[wrong_guesses])
-        print("You've Won! The word was", word)
+        print(f"{Fore.GREEN}You've Won! The word was", word)
         start_options()
 
 
@@ -140,7 +144,7 @@ def start_options():
             play_game = False
         elif continue_playing == "B":
             os.system("clear")
-            print(RULES, "Game Rules")
+            print(RULES)
         else:
             print("That is not a valid option. Please try again.")
 
