@@ -2,10 +2,9 @@
 
 # Introduction
 Project milestone 3 for Code Institute Full-stack development program: Python Terminal.<br><brZ>
-Hangman is a Python terminal game, which runs in the Code Institute mock terminal on Heroku. The main goal of the game is to guess letters in order to find the word that the computer randomly selects. This project was inspired by the pencil guessing game for two or more players. 
-According to the site [Gambiter](http://gambiter.com/paper-pencil/Hangman_game.html), this game has been around since 1894 under the name "Birds, Beasts and Fishes".
+This project was created by myself to show a simple game using python and ran through heroku. The main goal of the game is to guess letters in order to find the word that the computer randomly selects. 
 
-[Live Project Here](https://portfolio-project-3.herokuapp.com/)
+[Live Project Here](https://hang-man-mp3.herokuapp.com/)
 
 <p align="center"><img src="./assets/images/readme/hangman-cover.png" alt="Hangman game webpage on multiple devices"></p>
 
