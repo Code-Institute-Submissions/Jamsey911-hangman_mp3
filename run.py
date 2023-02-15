@@ -25,7 +25,7 @@ def select_word():
     file = open('data.txt', encoding="utf-8")
     words = file.readlines()
     file.close()
-    my_word = 'a'
+    my_word = "a"
     while len(my_word) < 3:
         # makes sure word is at least 3 letters long
         my_word = random.choice(words)
