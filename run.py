@@ -16,7 +16,10 @@ A - PLAY GAME
 B - GAME RULES
 C - EXIT THE GAME
 """
-RULES = str(images.game_info).strip("\n")
+
+RULES = images.GAME_INFO
+
+LOGO = images.LOGO
 
 
 def select_word():
@@ -142,5 +145,5 @@ def start_options():
             print("That is not a valid option. Please try again.")
 
 
-print(RULES)
+print(LOGO)
 start_options()
