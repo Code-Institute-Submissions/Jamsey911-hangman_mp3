@@ -15,9 +15,9 @@ colorama.init(autoreset=True)
 
 # Opening page
 PLAY_AGAIN_MSG = """
-A - PLAY GAME
-B - GAME RULES
-C - EXIT THE GAME
+  A - PLAY GAME
+  B - GAME RULES
+  C - EXIT THE GAME
 """
 
 RULES = images.GAME_INFO
