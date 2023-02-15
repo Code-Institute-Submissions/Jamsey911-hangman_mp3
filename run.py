@@ -4,11 +4,10 @@ has to guess the letters in the word or can take a guess
 at the word for 2 lives.
 User has 8 chances before game over.
 """
-
-# Import Random
 import random
 import os
 import images
+
 import colorama
 from colorama import Fore
 colorama.init(autoreset=True)
