@@ -53,25 +53,28 @@ def main_game():
     wrong_guesses = 0
     # used letter tracker
     used_letters = []
+    # Calcalates score
+    score = 0
     # Main loop
-    print("Welcome to Hangman. Try to guess the word")
+    print("Welcome to Hangman. \nTry to guess the word")
     print(word)
 
     # Calcaltes how many lives are left
     while wrong_guesses < lives and current_guess != word:
         print(images.HANGMAN[wrong_guesses])
-        print("You've used the following letters: ", used_letters)
-        print("So far, the word is:", current_guess)
-        print("You have", wrong_guesses, "of 8 guesses left")
+        print("You've used the following letters: ", used_letters,
+              "\nSo far, the word is:", current_guess,
+              "\nYou have", wrong_guesses, "of 8 guesses left""")
 
         guess = input("Select a letter:\n")
         # Checks if a single letter is entered
         if len(guess) == 1 and guess.isalpha():
             os.system("clear")
             guess = guess.upper()
-        # Changes input to uppercase and checks if letter is in word
+        # Changes input to uppercase and checks if guess is the word
         elif guess.upper() == word:
             os.system("clear")
+            score += 300
             break
         # 2 lives used if a word is incorrect
         elif len(guess) == len(word) and guess.upper() != word:
@@ -81,24 +84,26 @@ def main_game():
         # Prompt for an incorrect value
         else:
             os.system("clear")
-            print(guess + """is an incorrect entry, please select a
-                single letter or take a guess at the word.""")
+            print(guess, " is an incorrect entry, please select a single" 
+                         "\nletter or take a guess at the word.")
             continue
     # Check letter
         while guess in used_letters:
             os.system("clear")
-            print("You've already guessed that letter:", guess)
-            print(images.HANGMAN[wrong_guesses])
-            print("You've used the following letters: ", used_letters)
-            print("So far, the word is:", current_guess)
+            print("You've already guessed that letter:", guess,
+                  images.HANGMAN[wrong_guesses])
+            print("You've used the following letters: ", used_letters,
+                  "\nSo far, the word is:", current_guess)
             print("You have", wrong_guesses, " of 8 guesses left")
             guess = input("Enter your guess:\n").upper()
+
     # Add new guessed letter to list of guessed letters
         used_letters.append(guess)
         # print(used_letters)
 
         if guess in word:
             os.system("clear")
+            score += 25
             print(f"{Fore.GREEN}You've guessed correctly")
 
             # Checks if the guessed letter is in the word
@@ -115,10 +120,10 @@ def main_game():
             os.system("clear")
             print(f"{Fore.RED} {guess} is incorrect")
             wrong_guesses += 1
-    game_over(wrong_guesses, word, lives)
+    game_over(wrong_guesses, word, lives, score)
 
 
-def game_over(wrong_guesses, word, lives):
+def game_over(wrong_guesses, word, lives, score):
     """Calcalates wrong guesses to guesses left """
     if wrong_guesses == lives:
         print(images.HANGMAN[wrong_guesses])
@@ -127,6 +132,7 @@ def game_over(wrong_guesses, word, lives):
     else:
         print(images.HANGMAN[wrong_guesses])
         print(f"{Fore.GREEN}You've Won! The word was", word)
+        print("Your score is: ", score)
         start_options()
 
 
