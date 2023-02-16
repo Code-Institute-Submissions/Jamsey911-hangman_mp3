@@ -86,12 +86,8 @@ I spent time planning and thinking about the logic and flow behind the game to e
 
 ### Logo and Intro Message
 
-![Logo and Intro Message](./assets/images/readme/hangman-feature-1.jpg)
+![Logo and Game Options](assets/images/features/hm_features_1.png)
 
-* When the users reach the website, they will see this feature. The game logo and the intro message are displayed here.<br>
+* When the users reach the website, they will see this feature. The game logo with the game options below.<br>
 
 
-As a First Time Visitor, I want to easily navigate through the game with simple inputs.
-As a First Time Visitor, I want to be able to have fun, enjoy the game and feel nostalgic when playing.
-As a First Time Visitor, I want to be able to attempt to be any Highscores.
-As a First Time Visitor, I want to be able to make sure I dont get any repeated words.

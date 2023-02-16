@@ -19,6 +19,8 @@ PLAY_AGAIN_MSG = """
   B - GAME RULES
   C - EXIT THE GAME
 """
+TXT = " "
+X = TXT.center(12)
 
 RULES = images.GAME_INFO
 
@@ -56,15 +58,16 @@ def main_game():
     # Calcalates score
     score = 0
     # Main loop
-    print("Welcome to Hangman. \nTry to guess the word")
+    print(X, "Welcome to Hangman.",
+          X, "\nTry to guess the word")
     print(word)
 
     # Calcaltes how many lives are left
     while wrong_guesses < lives and current_guess != word:
         print(images.HANGMAN[wrong_guesses])
-        print("You've used the following letters: ", used_letters,
-              "\nSo far, the word is:", current_guess,
-              "\nYou have", wrong_guesses, "of 8 guesses left""")
+        print(X, "You've used the following letters: ", used_letters,
+              X, "\nSo far, the word is:", current_guess,
+              X, "\nYou have", wrong_guesses, "of 8 guesses left")
 
         guess = input("Select a letter:\n")
         # Checks if a single letter is entered
@@ -79,7 +82,7 @@ def main_game():
         # 2 lives used if a word is incorrect
         elif len(guess) == len(word) and guess.upper() != word:
             os.system("clear")
-            print(guess + " is incorrect.")
+            print(X, guess + " is incorrect.")
             wrong_guesses += 1
         # Prompt for an incorrect value
         else:
@@ -90,11 +93,11 @@ def main_game():
     # Check letter
         while guess in used_letters:
             os.system("clear")
-            print("You've already guessed that letter:", guess,
-                  images.HANGMAN[wrong_guesses])
-            print("You've used the following letters: ", used_letters,
-                  "\nSo far, the word is:", current_guess)
-            print("You have", wrong_guesses, " of 8 guesses left")
+            print(X, "You've already guessed that letter:", guess,
+                  X, images.HANGMAN[wrong_guesses])
+            print(X, "You've used the following letters: ", used_letters,
+                  "\n", X, "So far, the word is:", current_guess)
+            print(X, "You have", wrong_guesses, " of 8 guesses left")
             guess = input("Enter your guess:\n").upper()
 
     # Add new guessed letter to list of guessed letters
@@ -104,7 +107,7 @@ def main_game():
         if guess in word:
             os.system("clear")
             score += 25
-            print(f"{Fore.GREEN}You've guessed correctly")
+            print(X, f"{Fore.GREEN}You've guessed correctly")
 
             # Checks if the guessed letter is in the word
             new_current_guess = ""
@@ -118,7 +121,7 @@ def main_game():
             print(new_current_guess)
         else:
             os.system("clear")
-            print(f"{Fore.RED} {guess} is incorrect")
+            print(X, f"{Fore.RED} {guess} is incorrect")
             wrong_guesses += 1
     game_over(wrong_guesses, word, lives, score)
 
@@ -126,13 +129,13 @@ def main_game():
 def game_over(wrong_guesses, word, lives, score):
     """Calcalates wrong guesses to guesses left """
     if wrong_guesses == lives:
-        print(images.HANGMAN[wrong_guesses])
-        print(f"{Fore.RED}You've been Hanged! The correct word is: ", word)
+        print(X, images.HANGMAN[wrong_guesses])
+        print(X, f"{Fore.RED}You've been Hanged! The correct word is: ", word)
         start_options()
     else:
-        print(images.HANGMAN[wrong_guesses])
-        print(f"{Fore.GREEN}You've Won! The word was", word)
-        print("Your score is: ", score)
+        print(X, images.HANGMAN[wrong_guesses])
+        print(X, f"{Fore.GREEN}You've Won! The word was", word)
+        print(X, "Your score is: ", score)
         start_options()
 
 
@@ -145,13 +148,13 @@ def start_options():
             os.system("clear")
             return main_game()
         if continue_playing == "C":
-            print("Now closing the game...")
+            print(X, "Now closing the game...")
             play_game = False
         elif continue_playing == "B":
             os.system("clear")
             print(RULES)
         else:
-            print("That is not a valid option. Please try again.")
+            print(X, "That is not a valid option. Please try again.")
 
 
 print(LOGO)
