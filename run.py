@@ -19,8 +19,9 @@ PLAY_AGAIN_MSG = """
   B - GAME RULES
   C - EXIT THE GAME
 """
+
 TXT = " "
-X = TXT.center(16)
+X = TXT.center(23)
 
 RULES = design.GAME_INFO
 
@@ -65,12 +66,12 @@ def main_game():
     # Calcaltes how many lives are left
     while wrong_guesses < lives and current_guess != word:
         print(design.HANGMAN[wrong_guesses])
-        print(X, " You've used the following letters: ", used_letters,
-                 "\n", X, "So far, the word is:", current_guess,
-                 "\n", X, "You have", wrong_guesses, "of 8 guesses left")
+        print("You've used the following letters: ", used_letters,
+              "\nSo far, the word is:", current_guess,
+              "\nYou have", wrong_guesses, "of 8 guesses left")
 
         #  Input for player to enter their guess
-        guess = input(X + "  Select a letter:\n")
+        guess = input("Enter your guess:\n")
 
         # Checks if a single letter is entered
         if len(guess) == 1 and guess.isalpha():
@@ -95,10 +96,10 @@ def main_game():
     # Check letter
         while guess in used_letters:
             os.system("clear")
-            print(X, "You've already guessed that letter:", guess,
-                  X, design.HANGMAN[wrong_guesses])
-            print(X, "You've used the following letters: ", used_letters,
-                  "\n", X, "So far, the word is:", current_guess)
+            print("You've already guessed that letter:", guess,
+                  design.HANGMAN[wrong_guesses])
+            print("You've used the following letters: ", used_letters,
+                  "\nSo far, the word is:", current_guess)
             print(X, "You have", wrong_guesses, " of 8 guesses left")
             guess = input("Enter your guess:\n").upper()
 
