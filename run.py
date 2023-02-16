@@ -59,8 +59,8 @@ def main_game():
     # Calcalates score
     score = 0
     # Main loop
-    print(X, "  Welcome to Hangman."
-             "\n", X, "Try to guess the word")
+    print("\n", X, " Welcome to Hangman."
+          "\n", X, "Try to guess the word")
     print(word)
 
     # Calcaltes how many lives are left
@@ -71,26 +71,26 @@ def main_game():
               "\nYou have", wrong_guesses, "of 8 guesses left")
 
         #  Input for player to enter their guess
-        guess = input("Enter your guess:\n")
+        guess = input("Enter your guess:\n").upper()
 
         # Checks if a single letter is entered
         if len(guess) == 1 and guess.isalpha():
             os.system("clear")
             guess = guess.upper()
         # Changes input to uppercase and checks if guess is the word
-        elif guess.upper() == word:
+        elif guess == word:
             os.system("clear")
             score += 300
             break
         # 2 lives used if a word is incorrect
-        elif len(guess) == len(word) and guess.upper() != word:
+        elif len(guess) == len(word) and guess != word:
             os.system("clear")
             print(X, guess + " is incorrect.")
             wrong_guesses += 1
         # Prompt for an incorrect value
         else:
             os.system("clear")
-            print(guess, " is an incorrect entry, please select a single" 
+            print(guess, " is an incorrect entry, please select a single"
                          "\nletter or take a guess at the word.")
             continue
     # Check letter
@@ -100,7 +100,7 @@ def main_game():
                   design.HANGMAN[wrong_guesses])
             print("You've used the following letters: ", used_letters,
                   "\nSo far, the word is:", current_guess)
-            print(X, "You have", wrong_guesses, " of 8 guesses left")
+            print("You have", wrong_guesses, " of 8 guesses left")
             guess = input("Enter your guess:\n").upper()
 
     # Add new guessed letter to list of guessed letters
@@ -121,7 +121,6 @@ def main_game():
                     new_current_guess += current_guess[letter]
 
             current_guess = new_current_guess
-            print(new_current_guess)
         else:
             os.system("clear")
             print(X, f"{Fore.RED} {guess} is incorrect")
@@ -157,7 +156,7 @@ def start_options():
             os.system("clear")
             print(RULES)
         else:
-            print(X, "That is not a valid option. Please try again.")
+            print("That is not a valid option. Please try again.")
 
 
 print(LOGO)
