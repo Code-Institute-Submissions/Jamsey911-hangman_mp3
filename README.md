@@ -54,9 +54,10 @@ This project was created by myself to show a simple game using python and ran th
 
 * As a website creator, I want to:
   
-1. Build an game to navigate.
-2. Build a simple game to understand.
-3. Build a game with images being visible which changes when the user progresses
+1. I want to build an game to navigate.
+2. I want to build a simple game to understand.
+3. I want to build a game with images being visible which changes when the user progresses
+4. I want to build a game that keeps score
    
 * As a first time user, I want to:
 
@@ -69,6 +70,7 @@ This project was created by myself to show a simple game using python and ran th
 
 1. As a Returning user, be able to play the game again with a different word as chosen by the computer.
 2. As a Returning user, I want to be able to navigate through the app consistently.
+3. As a Returning user, I want to beat my previous score.
    
 ## Design
 
