@@ -85,7 +85,7 @@ def main_game():
         # 2 lives used if a word is incorrect
         elif len(guess) == len(word) and guess != word:
             os.system("clear")
-            print(X, guess + " is incorrect.")
+            print("\n", X, guess + " is incorrect.")
             wrong_guesses += 1
         # Prompt for an incorrect value
         else:
@@ -96,7 +96,7 @@ def main_game():
     # Check letter
         while guess in used_letters:
             os.system("clear")
-            print("You've already guessed that letter:", guess,
+            print("\n", X, "You've already guessed that letter:", guess,
                   design.HANGMAN[wrong_guesses])
             print("You've used the following letters: ", used_letters,
                   "\nSo far, the word is:", current_guess)
