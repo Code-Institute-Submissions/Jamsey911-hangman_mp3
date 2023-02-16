@@ -90,8 +90,8 @@ def main_game():
         # Prompt for an incorrect value
         else:
             os.system("clear")
-            print(guess, " is an incorrect entry, please select a single"
-                         "\nletter or take a guess at the word.")
+            print("\n ", guess, "is an incorrect entry. Please select a"
+                  "\n  single letter or take a guess at the word.")
             continue
     # Check letter
         while guess in used_letters:
