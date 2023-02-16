@@ -91,6 +91,8 @@ GAME_INFO = Fore.BLUE + """
    |  |      POINTS:                                                   |  |
    |  |  4 - You can take a guess at the word but you will be deduted  |  |
    |  |      2 guesses                                                 |  |
+   |  |  5 - You get 25 points for a correct letter and 300 point      |  |
+   |  |      if you guess the word                                     |  |
    |  |________________________________________________________________|  |
    |______________________________________________________________________|
 """
