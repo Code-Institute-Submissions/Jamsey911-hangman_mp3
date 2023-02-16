@@ -66,12 +66,12 @@ def main_game():
     # Calcaltes how many lives are left
     while wrong_guesses < lives and current_guess != word:
         print(design.HANGMAN[wrong_guesses])
-        print("You've used the following letters: ", used_letters,
-              "\nSo far, the word is:", current_guess,
-              "\nYou have", wrong_guesses, "of 8 guesses left")
+        print("  You've used the following letters: ", used_letters,
+              "\n  So far, the word is:", current_guess,
+              "\n  You have", wrong_guesses, "of 8 guesses left")
 
         #  Input for player to enter their guess
-        guess = input("Enter your guess:\n").upper()
+        guess = input("  Enter your guess:\n").upper()
 
         # Checks if a single letter is entered
         if len(guess) == 1 and guess.isalpha():
@@ -98,10 +98,10 @@ def main_game():
             os.system("clear")
             print("\n", X, "You've already guessed that letter:", guess,
                   design.HANGMAN[wrong_guesses])
-            print("You've used the following letters: ", used_letters,
-                  "\nSo far, the word is:", current_guess)
-            print("You have", wrong_guesses, " of 8 guesses left")
-            guess = input("Enter your guess:\n").upper()
+            print("  You've used the following letters: ", used_letters,
+                  "\n  So far, the word is:", current_guess)
+            print("  You have", wrong_guesses, " of 8 guesses left")
+            guess = input("  Enter your guess:\n").upper()
 
     # Add new guessed letter to list of guessed letters
         used_letters.append(guess)
@@ -150,13 +150,13 @@ def start_options():
             os.system("clear")
             return main_game()
         if continue_playing == "C":
-            print(X, "Now closing the game...")
+            print("  Now closing the game...")
             play_game = False
         elif continue_playing == "B":
             os.system("clear")
             print(RULES)
         else:
-            print("That is not a valid option. Please try again.")
+            print("  That is not a valid option. Please try again.")
 
 
 print(LOGO)
