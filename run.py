@@ -110,7 +110,7 @@ def main_game():
         if guess in word:
             os.system("clear")
             score += 25
-            print(X, f"{Fore.GREEN}You've guessed correctly")
+            print("\n", X, f"{Fore.GREEN}You've guessed correctly")
 
             # Checks if the guessed letter is in the word
             new_current_guess = ""
@@ -123,7 +123,7 @@ def main_game():
             current_guess = new_current_guess
         else:
             os.system("clear")
-            print(X, f"{Fore.RED} {guess} is incorrect")
+            print("\n", X, f"{Fore.RED} {guess} is incorrect")
             wrong_guesses += 1
     game_over(wrong_guesses, word, lives, score)
 
