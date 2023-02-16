@@ -6,7 +6,7 @@ User has 8 chances before game over.
 """
 import random
 import os
-import images
+import design
 
 import colorama
 from colorama import Fore
@@ -22,9 +22,9 @@ PLAY_AGAIN_MSG = """
 TXT = " "
 X = TXT.center(16)
 
-RULES = images.GAME_INFO
+RULES = design.GAME_INFO
 
-LOGO = images.LOGO
+LOGO = design.LOGO
 
 
 def select_word():
@@ -48,7 +48,7 @@ def main_game():
     """Main game loop"""
     word = select_word()
     # Lives generated for user to abide by
-    lives = len(images.HANGMAN) - 1
+    lives = len(design.HANGMAN) - 1
     # Initalize variables
     current_guess = "-" * len(word)
     # Wrong game counter
@@ -64,7 +64,7 @@ def main_game():
 
     # Calcaltes how many lives are left
     while wrong_guesses < lives and current_guess != word:
-        print(images.HANGMAN[wrong_guesses])
+        print(design.HANGMAN[wrong_guesses])
         print(X, " You've used the following letters: ", used_letters,
                  "\n", X, "So far, the word is:", current_guess,
                  "\n", X, "You have", wrong_guesses, "of 8 guesses left")
@@ -96,7 +96,7 @@ def main_game():
         while guess in used_letters:
             os.system("clear")
             print(X, "You've already guessed that letter:", guess,
-                  X, images.HANGMAN[wrong_guesses])
+                  X, design.HANGMAN[wrong_guesses])
             print(X, "You've used the following letters: ", used_letters,
                   "\n", X, "So far, the word is:", current_guess)
             print(X, "You have", wrong_guesses, " of 8 guesses left")
@@ -131,11 +131,11 @@ def main_game():
 def game_over(wrong_guesses, word, lives, score):
     """Calcalates wrong guesses to guesses left """
     if wrong_guesses == lives:
-        print(X, images.HANGMAN[wrong_guesses])
+        print(X, design.HANGMAN[wrong_guesses])
         print(X, f"{Fore.RED}You've been Hanged! The correct word is: ", word)
         start_options()
     else:
-        print(X, images.HANGMAN[wrong_guesses])
+        print(X, design.HANGMAN[wrong_guesses])
         print(X, f"{Fore.GREEN}You've Won! The word was", word)
         print(X, "Your score is: ", score)
         start_options()
