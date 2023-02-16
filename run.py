@@ -20,7 +20,7 @@ PLAY_AGAIN_MSG = """
   C - EXIT THE GAME
 """
 TXT = " "
-X = TXT.center(12)
+X = TXT.center(16)
 
 RULES = images.GAME_INFO
 
@@ -58,18 +58,20 @@ def main_game():
     # Calcalates score
     score = 0
     # Main loop
-    print(X, "Welcome to Hangman.",
-          X, "\nTry to guess the word")
+    print(X, "  Welcome to Hangman."
+             "\n", X, "Try to guess the word")
     print(word)
 
     # Calcaltes how many lives are left
     while wrong_guesses < lives and current_guess != word:
         print(images.HANGMAN[wrong_guesses])
-        print(X, "You've used the following letters: ", used_letters,
-              X, "\nSo far, the word is:", current_guess,
-              X, "\nYou have", wrong_guesses, "of 8 guesses left")
+        print(X, " You've used the following letters: ", used_letters,
+                 "\n", X, "So far, the word is:", current_guess,
+                 "\n", X, "You have", wrong_guesses, "of 8 guesses left")
 
-        guess = input("Select a letter:\n")
+        #  Input for player to enter their guess
+        guess = input(X + "  Select a letter:\n")
+
         # Checks if a single letter is entered
         if len(guess) == 1 and guess.isalpha():
             os.system("clear")
