@@ -30,7 +30,7 @@ This project was created by myself to show a simple game using python and ran th
     * [Hangman Stage 9 - Win](#Hangman-Stage-9---Win)
     * [Hangman Stage 10 - Win Extra](#Hangman-Stage-10---Win-Extra)
     * [Menu Options](#Menu-Options)
-    * [Leaderboard](#Leaderboard)
+    * [Game Rules](#Game-Rules)
     * [Exit Game](#Exit-Game)
     * [How to Play](#how-to-play)
 * [Storage Data](#Storage-Data)
@@ -107,63 +107,91 @@ Game Options menu. <br>
 ## Game Features
 
 ### Hangman Stage 1
-![Game Feature](./assets/images/features/hangman-feature-5.jpg)<br><br>
+![Game Feature](./assets/images/features/hm-stage-1.png)<br><br>
 
-This feature displays where the main scene happens. Here the user can play and see the following information about the game:
-* Numbers of letters chosen by the computer 
-* Hangman stages
-* Letters guessed right
-* Letters guessed wrong
-* Current score
-* Current number of attempts
-* Input to guess a letter or a full word
-* Input letters to either guess a letter only or the full word
+A welcome message along with prompt to guess the word. The Hangman design is placed below the welcome prompt. The user then has a list of information to assist with the game. They are as foolow:
+* Letters already guessed
+* Correct guessed letters
+* Number of guesses
+* A prompt to have a guess
+* An Input to guess a letter or the full word
+
+A confirmation message is displayed over the hangman image once a leeter or word is selected. This is displayed as green for a correct letter or word, red for an incorrect letter or word and white for an invalid input.
 
 ### Hangman Stage 2 
 
-![Hangman Stage 2 ](./assets/images/readme/hangman-feature-6.jpg)<br><br>
-Any time the player guesses a wrong letter, a part of the hangman appears
-* 1 letter guessed wrong, the player will see the hangman and the first part of the hangman:  a rope, in green.
+![Hangman Stage 2 ](./assets/images/features/hm-stage-2.png)<br><br>
+* When the player guesses a letter or word which is not in the word, the head part of the hangman image is displayed and The display stays green
+
 
 ### Hangman Stage 3
 
-![Hangman Stage 3](./assets/images/readme/hangman-feature-7.jpg)
-* 2 letters guessed wrong the player will see the hangman and 2 parts of the hangman a rope and head in green.
+![Hangman Stage 3](./assets/images/features/hm-stage-3.png)
+* When the player guesses a second letter or word which is not in the word, the body part of the hangman image is displayed and The display stays green
 
 ### Hangman Stage 4
 
-![Hangman Stage 4](./assets/images/readme/hangman-feature-8.jpg)
-* 3 letters guessed wrong the player will see the hangman and 3 parts of the hangman rope, head and torso in yellow.
+![Hangman Stage 4](./assets/images/features/hm-stage-4.png)
+* When the player guesses a third letter or word which is not in the word, the left arm part of the hangman image is displayed and The display colour changes to yellow
 
 ### Hangman Stage 5
 
-![Hangman Stage 5](./assets/images/readme/hangman-feature-9.jpg)
-* 4 letters guessed wrong the player will see the hangman and 4 parts of the hangman rope, head, torso and the right arm in yellow.
+![Hangman Stage 5](./assets/images/features/hm-stage-5.png)
+* When the player guesses a fourth letter or word which is not in the word, the right arm part of the hangman image is displayed and The display colour stays yellow
 
 ### Hangman Stage 6
 
-![Hangman Stage 6](./assets/images/readme/hangman-feature-10.jpg)
-* 5 letters guessed wrong the player will see the hangman and 5 parts of the hangman, rope, head, torso and both arms in red. Also the alert message "Danger Zone" will be displayed.
+![Hangman Stage 6](./assets/images/features/hm-stage-6.png)
+* When the player guesses a fifth letter or word which is not in the word, the left leg part of the hangman image is displayed and The display stays yellow
 
 ### Hangman Stage 7
 
-![Hangman Stage 7](./assets/images/readme/hangman-feature-11.jpg)
-* 6 letters guessed wrong and the player will see the hangman and 6 parts of the hangman rope, head, torso, both arms and left leg in red. Also the alert message "Danger Zone" will be displayed.
+![Hangman Stage 7](./assets/images/features/hm-stage-7.png)
+* When the player guesses a sixth letter or word which is not in the word, the right leg part of the hangman image is displayed and The display colour changes to red
 
-### Hangman Stage 8 - Lose
+### Hangman Stage 8
 
-![Hangman Stage 8 - Lose](./assets/images/readme/hangman-feature-12.jpg)
-* 7 letters guessed wrong the player will see the full hangman and the game is over.
+![Hangman Stage 8](./assets/images/features/hm-stage-8.png)
+* When the player guesses a seventh letter or word which is not in the word, the right foot part of the hangman image is displayed and The display colour stays red
 
-### Hangman Stage 9 - Win
+### Hangman Stage 9/Lose
 
-![Hangman Stage 9 - Win](./assets/images/readme/hangman-feature-13.jpg)
-* If the player guessed the full word letter by letter, they will see this feature and will win the game and get 200 points.
+![Hangman Stage 9 - Lose](./assets/images/features/hm-end-game-lose.png)
+* When the player guesses a eigth letter or word which is not in the word, the hamgman design is fully complete and The display colour stays red.
 
-### Hangman Stage 10 - Win Extra
+### Hangman Stage 9/Win
 
-![Hangman Stage 10 - Win Extra](./assets/images/readme/hangman-feature-14.jpg)
-* If the player guessed all the letters that appear in the word thereby completing the word or at least guessing no more than 3 correct letters before completing the full word, this feature will appear.
+![Hangman Stage 9 - Win](./assets/images/features/hm-end-game-win.png)
+* If the player guessed the full word, they have won the game. When this happens, a prompt that the user has won along with the total points for the game.
+
+### Menu Options
+
+![Menu Options](./assets/images/readme/hangman-menu.jpg)
+* In the end of the game users will have access to the menu where they can choose from these options: <br>
+[A] - Play Game <br>
+[B] - Game Rules <br>
+[C] - Exit Game
+
+### Leaderboard
+![Game Rules](./assets/images/readme/hangman-leaderboard.jpg)
+* The Leaderboard shows the 15 players with the best scores.
+
+### Exit Game
+![Exit Game](./assets/images/readme/hangman-exit-game.jpg)
+* The players will see this message if they will chose to exit the game by typing [C].
+
+### How to Play
+![How to Play](./assets/images/readme/hangman-explanation-1.jpg)<br>
+![How to Play](./assets/images/readme/hangman-message-back.jpg)<br>
+The player has 7 attempts to try to guess the right word by inputting letters or can try to input all the letters to correctly complete the full . The word is randomly chosen by the computer from a list.
+* When the game starts the player can see how many letters are in the word [1] and the computer will ask the player to input a letter or a word [7].
+* If the player guesses the right letter, they will see a message from the computer [8] the letter guessed displayed in the word length [3], the hangman stage will remain the same [2] and the score will increase by 25 points [5]
+* If the player guesses a wrong letter, they will see a message from the computer [9] the letter guessed displayed in the wrong letters guesses [4], the hangman stage will turn to the next stage [2] and the number of attempts will decrease by 1 [6]
+* When the player types an invalid input, they will see a message from the computer [10].
+* If the user guesses the right word they will see the [Winner Feature](#Hangman-Stage-9---Win)
+* If the player guessed the full word at once or at least no more than 3 letters guessed right before trying to guess the full word, they will win the game-winning 500 extra points and see this feature [Winner Feature / Extra Points](#Hangman-Stage-10---Win)
+* 7 letters guessed wrong and the player will see the [Loser Feature](#Hangman-Stage-8---lose)
+
 
 
 
