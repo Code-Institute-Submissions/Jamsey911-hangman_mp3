@@ -301,11 +301,11 @@ The [CI Python LinterEP8](https://pep8ci.herokuapp.com/) This linter is a Code I
 ## Credits
 
 ### Design Images
-- [Hangman Logo Design](./assets/images/features/hm-disgn-1.png): Design by <a href="https://replit.com/@SwaritChoudhari"> found in </a> on <a href="https://replit.com/talk/share/Hangman-With-Graphics/115862">Replit</a>
-- [Rules Design](./assets/images/features/hm-disgn-2.png): Design by <a href="https://github.com/PedroCristo/portfolio_project_3/commits?author=PedroCristo">PedroCristo </a> found in <a href="https://portfolio-project-3.herokuapp.com/">Hangman Website</a>
+- [Hangman Logo Design](./assets/images/features/hm-home_screen.png): Design by <a href="https://replit.com/@SwaritChoudhari"> Swarit Choudhari </a>found in:<a href="https://replit.com/talk/share/Hangman-With-Graphics/115862">Replit</a>
+- [Rules Design](./assets/images/features/hm-rules.png): Design by <a href="https://github.com/PedroCristo/portfolio_project_3/commits?author=PedroCristo">PedroCristo </a> found in <a href="https://portfolio-project-3.herokuapp.com/">Hangman Website</a>
 
 
 ### Code
 - The inital code was adapted from MJ Codes in his python tutorials video: [Python Hangman](https://www.youtube.com/watch?v=wmSysRui0cI)
-- The words i used to randomize were copied from the website trinket.io:[Put Interactive Python Anywhere on the Web](https://trinket.io/python/99f458ee11)
+- The words i used to randomize were copied from the website trinket.io: [Put Interactive Python Anywhere on the Web](https://trinket.io/python/99f458ee11)
 - My README.md was based off the template illastrated by [PedroCristo](https://github.com/PedroCristo/portfolio_project_3)
