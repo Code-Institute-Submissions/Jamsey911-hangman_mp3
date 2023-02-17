@@ -241,22 +241,21 @@ The [CI Python LinterEP8](https://pep8ci.herokuapp.com/) This linter is a Code I
   ![Lighthouse Result](./assets/images/testing/hm-test-lighthouse.png).
 
   ## Functionality 
-* The terminal has no issues and is working properly 
-* The input for name and city have the right behaviour and shows the user an alert if the input is empty
-* The game rules appear without any issues after the player submits their name and city
-* The option to press any key to start a game is running well
-* The game runs without any issues and as expected 
-* At the end of the game, the Leaderboard is updating correctly
-* All the menu options are working without any fails
+* No terminal issues and return values are correct 
+* All design images display correctly
+* All game rules come back with no errors
+* All statements print correctly
+* Correct values are displayed when a game is completed
+* Rules option displays wit no issues
+* No issue can be found and game works as expected
 
 ## Bugs 
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
 | Random word not changing after first completed game | Defined a function for the word to be refreshed correctly |
-| Font size in bookings page not displaying correctly | Edit incorrect CSS query  |
-| Body Elements overflow into header on all pages | A clear property of left was added|
-| Images in the upcoming events page caused poor perfomance | Downsized the images and saved as jpg's |
+| Rules design image not displaying correctly | Added as list in error  |
+ Downsized the images and saved as jpg's |
 | Favicon not appearing | Changed location to a hyperlink refrence    |
 
 ## Deploying this Project

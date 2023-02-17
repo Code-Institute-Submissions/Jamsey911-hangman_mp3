@@ -94,7 +94,7 @@ def main_game():
             print("\n ", guess, "is an incorrect entry. Please select a"
                   "\n  single letter or take a guess at the word.")
             continue
-    # Check letter
+        # Check letter
         while guess in used_letters:
             # Prints when a letter has already been guessed
             os.system("clear")
@@ -105,7 +105,7 @@ def main_game():
             print("  You have", wrong_guesses, " of 8 guesses left")
             guess = input("  Enter your guess:\n").upper()
 
-    # Add new guessed letter to list of guessed letters
+        # Add new guessed letter to list of guessed letters
         used_letters.append(guess)
         # Print correct guess and add to score
         if guess in word:
