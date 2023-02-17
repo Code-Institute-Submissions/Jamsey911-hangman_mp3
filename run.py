@@ -61,7 +61,6 @@ def main_game():
     # Main loop
     print("\n", X, " Welcome to Hangman."
           "\n", X, "Try to guess the word")
-    print(word)
 
     # Calcaltes how many lives are left
     while wrong_guesses < lives and current_guess != word:
