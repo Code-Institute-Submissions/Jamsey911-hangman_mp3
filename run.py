@@ -13,16 +13,16 @@ from colorama import Fore
 colorama.init(autoreset=True)
 
 
-# Opening page
+# Options Menu
 PLAY_AGAIN_MSG = """
   A - PLAY GAME
   B - GAME RULES
   C - EXIT THE GAME
 """
-
+# Used to create spacing
 TXT = " "
 X = TXT.center(23)
-
+# Links to the rules design
 RULES = design.GAME_INFO
 
 LOGO = design.LOGO
@@ -35,8 +35,9 @@ def select_word():
     words = file.readlines()
     file.close()
     my_word = "a"
+    # makes sure word is at least 3 letters long
     while len(my_word) < 3:
-        # makes sure word is at least 3 letters long
+        # Strips down word 
         my_word = random.choice(words)
         my_word = str(my_word).strip("[]")
         my_word = str(my_word).strip("\n")
@@ -47,22 +48,23 @@ def select_word():
 
 def main_game():
     """Main game loop"""
+    # Generates random word
     word = select_word()
     # Lives generated for user to abide by
     lives = len(design.HANGMAN) - 1
-    # Initalize variables
+    # Changes letters display to a hyphen 
     current_guess = "-" * len(word)
-    # Wrong game counter
+    # Wrong guess counter
     wrong_guesses = 0
     # used letter tracker
     used_letters = []
-    # Calcalates score
+    # Calcalate score
     score = 0
-    # Main loop
+    # Start-up message
     print("\n", X, " Welcome to Hangman."
           "\n", X, "Try to guess the word")
 
-    # Calcaltes how many lives are left
+    # Checks how many lives reamin
     while wrong_guesses < lives and current_guess != word:
         print(design.HANGMAN[wrong_guesses])
         print("  You've used the following letters: ", used_letters,
@@ -94,6 +96,7 @@ def main_game():
             continue
     # Check letter
         while guess in used_letters:
+            # Prints when a letter has already been guessed
             os.system("clear")
             print("\n", X, "You've already guessed that letter:", guess,
                   design.HANGMAN[wrong_guesses])
@@ -104,8 +107,7 @@ def main_game():
 
     # Add new guessed letter to list of guessed letters
         used_letters.append(guess)
-        # print(used_letters)
-
+        # Print correct guess and add to score
         if guess in word:
             os.system("clear")
             score += 25
@@ -120,6 +122,7 @@ def main_game():
                     new_current_guess += current_guess[letter]
 
             current_guess = new_current_guess
+        # Prints incorrect statement and add 1 to lives
         else:
             os.system("clear")
             print("\n", X, f"{Fore.RED} {guess} is incorrect")
@@ -128,11 +131,13 @@ def main_game():
 
 
 def game_over(wrong_guesses, word, lives, score):
-    """Calcalates wrong guesses to guesses left """
+    """Calcalates wrong guesses to guesses left"""
+    # Print a lose display if no lives left
     if wrong_guesses == lives:
         print(X, design.HANGMAN[wrong_guesses])
         print(X, f"{Fore.RED}You've been Hanged! The correct word is: ", word)
         start_options()
+    # Prints a win display if user has guessed correctly
     else:
         print(X, design.HANGMAN[wrong_guesses])
         print(X, f"{Fore.GREEN}You've Won! The word was", word)
@@ -145,15 +150,19 @@ def start_options():
     play_game = True
     while play_game:
         continue_playing = input(PLAY_AGAIN_MSG).upper()
+        # Replays the game
         if continue_playing == "A":
             os.system("clear")
             return main_game()
+        # Closes the app
         if continue_playing == "C":
             print("  Now closing the game...")
             play_game = False
+        # Displays the rules
         elif continue_playing == "B":
             os.system("clear")
             print(RULES)
+        # Prints if an invalid input has been selected
         else:
             print("  That is not a valid option. Please try again.")
 

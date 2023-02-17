@@ -205,11 +205,8 @@ The player has 8 lives[5] in which he must slect a letter or guess the word the 
 #### Python Packages
 
 * [Random](https://docs.python.org/3/library/random.html?highlight=random#module-random): returns a random integer to get a random word
-* [Datetime](https://pypi.org/project/DateTime/): returns the full date
-* [Gspread](https://pypi.org/project/gspread/): allows communication with Google Sheets
-* [Colorama](https://pypi.org/project/colorama/): allows terminal text to be printed in different colours / styles
-* [Time](https://pypi.org/project/time/): defined time sleep
-* [google.oauth2.service_accoun](https://google-auth.readthedocs.io/en/stable/index.html): credentials used to validate credentials and grant access to Google service accounts
+* [os](https://docs.python.org/3/library/os.html): This was used to clear the screen after an input was selected
+* [Colorama](https://pypi.org/project/colorama/): This package allows me to add colour and styles to the terminal.
   
 ### Frameworks - Libraries - Programs Used
 
@@ -219,23 +216,21 @@ The player has 8 lives[5] in which he must slect a letter or guess the word the 
     * GitHub is used to store the project's code after being pushed from Git
 * [Heroku](https://id.heroku.com)
     * Heroku was used to deploy the live project
-* [VSCode](https://code.visualstudio.com/)
-    * VSCode was used to create and edit the website
 * [Lucidchart](https://lucid.app/)
     * Lucidchart was used to create the flowchart
-* [PEP8](http://pep8online.com/)
+* [CI Python LinterEP8](https://pep8ci.herokuapp.com/)
     * The PEP8 was used to validate all the Python code
-* [Patorjk](https://patorjk.com)
-    * Patorjk (ASCII Art Generator) was used to draw the game logos
+
 
 ## Testing
 
 ### PEP 8 Online
 
-The [PEP8](http://pep8online.com/) Validator Service was used to validate every Python file in the project to ensure there were no syntax errors in the project.
+The [CI Python LinterEP8](https://pep8ci.herokuapp.com/) This linter is a Code Institute designed app to verify python code.
 
-![PEP8](./assets/images/readme/hangman-pep8-results.jpg).
-* No errors or warnings were found during the testing of the code in PEP8
+![CI Python Linter](./assets/images/testing/hm-lint.png).
+![CI Python Linter](./assets/images/testing/hm-lint-2.png).
+* No errors or warnings were found in the run.py page. The design.py page returned only advisory comments due to the characters used to design the images for display but no errors were returned.
   
 ### Lighthouse 
 
@@ -247,7 +242,6 @@ The [PEP8](http://pep8online.com/) Validator Service was used to validate every 
 
   ## Functionality 
 * The terminal has no issues and is working properly 
-* The typewriter starts typing at the right time and is working correctly 
 * The input for name and city have the right behaviour and shows the user an alert if the input is empty
 * The game rules appear without any issues after the player submits their name and city
 * The option to press any key to start a game is running well
@@ -256,16 +250,15 @@ The [PEP8](http://pep8online.com/) Validator Service was used to validate every 
 * All the menu options are working without any fails
 
 ## Bugs 
-### Python Lines too Long
-![Lines to long](./assets/images/readme/hangman-issue.jpg)
-![Lines to long](./assets/images/readme/hangman-issue-result.jpg)
 
-* When I first built the ASCII art for the logo I got the warning "line too long (126 > 79 characters)" from PEP8.<br>
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| Random word not changing after first completed game | Defined a function for the word to be refreshed correctly |
+| Font size in bookings page not displaying correctly | Edit incorrect CSS query  |
+| Body Elements overflow into header on all pages | A clear property of left was added|
+| Images in the upcoming events page caused poor perfomance | Downsized the images and saved as jpg's |
+| Favicon not appearing | Changed location to a hyperlink refrence    |
 
-### Fixed Bug
-![Fix Bug](./assets/images/readme/hangman-issue-fixed.jpg)
-* I had to rebuild the logo using the program Patorjk (ASCII Art Generator) to avoid these issues.
-* 
 ## Deploying this Project
 
 * This site was deployed by completing the following steps:
@@ -325,9 +318,6 @@ The [PEP8](http://pep8online.com/) Validator Service was used to validate every 
 * [Gambiter](http://gambiter.com/paper-pencil/Hangman_game.html)
 
 
-## Special Thanks
-
-  * Special thanks to my mentor Sandeep Aggarwal, my colleagues at Code Institute, Kasia Bogucka, Shellie Downie and Mairéad Gillic for their assistance throughout this project.
 
 
 
