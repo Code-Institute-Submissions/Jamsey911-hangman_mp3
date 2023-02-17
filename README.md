@@ -255,7 +255,6 @@ The [CI Python LinterEP8](https://pep8ci.herokuapp.com/) This linter is a Code I
 | ----------- | ----------- |
 | Random word not changing after first completed game | Defined a function for the word to be refreshed correctly |
 | Rules design image not displaying correctly | Added as list in error  |
- Downsized the images and saved as jpg's |
 | Favicon not appearing | Changed location to a hyperlink refrence    |
 
 ## Deploying this Project
@@ -303,20 +302,12 @@ The [CI Python LinterEP8](https://pep8ci.herokuapp.com/) This linter is a Code I
 
 ## Credits
 
-### Content
-
-* All the content in the game is original 
-* The terminal function and template for the deployable application was provided by [Code Institute - Template](https://github.com/Code-Institute-Org/python-essentials-template)
-* The Python code for the typewriter was taken from the following tutorial: [Kwasii](outube.com/watch?v=A_1THfBpCH8)
-  
-### Information Sources / Resources
-
-* [W3Schools - Python](https://www.w3schools.com/python/)
-* [Stack Overflow](https://stackoverflow.com/)
-* [Scrimba - Pyhton](https://scrimba.com/learn/python)
-* [Gambiter](http://gambiter.com/paper-pencil/Hangman_game.html)
+### Design Images
+- [Hangman Logo Design](./assets/images/features/hm-disgn-1.png): Design by <a href="https://replit.com/@SwaritChoudhari"> found in </a> on <a href="https://replit.com/talk/share/Hangman-With-Graphics/115862">Replit</a>
+- [Rules Design](./assets/images/features/hm-disgn-2.png): Design by <a href="https://github.com/PedroCristo/portfolio_project_3/commits?author=PedroCristo">PedroCristo </a> found in <a href="https://portfolio-project-3.herokuapp.com/">Hangman Website</a>
 
 
-
-
-
+### Code
+- The inital code was adapted from MJ Codes in his python tutorials video: [Python Hangman](https://www.youtube.com/watch?v=wmSysRui0cI)
+- The words i used to randomize were copied from the website trinket.io:[Put Interactive Python Anywhere on the Web](https://trinket.io/python/99f458ee11)
+- My README.md was based off the template illastrated by [PedroCristo](https://github.com/PedroCristo/portfolio_project_3)
