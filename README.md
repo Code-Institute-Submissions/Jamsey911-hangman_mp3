@@ -18,7 +18,7 @@ This project was created by myself to show a simple game using python and ran th
      * [Flowcharts](#flowcharts)
 
 * Game Features
-    * [Logo and Intro Message](#Logo-and-Intro-Message) 
+    * [Logo and Game Options](#Logo-and-Game-Options) 
     * [Hangman Stage 1](#Hangman-Stage-1)
     * [Hangman Stage 2](#Hangman-Stage-2) 
     * [Hangman Stage 3](#Hangman-Stage-3)
@@ -26,20 +26,19 @@ This project was created by myself to show a simple game using python and ran th
     * [Hangman Stage 5](#Hangman-Stage-5)
     * [Hangman Stage 6](#Hangman-Stage-6)
     * [Hangman Stage 7](#Hangman-Stage-7)
-    * [Hangman Stage 8 - Lose](#Hangman-Stage-8---Lose)
-    * [Hangman Stage 9 - Win](#Hangman-Stage-9---Win)
-    * [Hangman Stage 10 - Win Extra](#Hangman-Stage-10---Win-Extra)
+    * [Hangman Stage 8](#Hangman-Stage-8)
+    * [Hangman Stage 9-Lose](#Hangman-Stage-9-Lose)
+    * [Hangman Stage 9-Win](#Hangman-Stage-9-Win)
     * [Menu Options](#Menu-Options)
     * [Game Rules](#Game-Rules)
     * [Exit Game](#Exit-Game)
     * [How to Play](#how-to-play)
-* [Storage Data](#Storage-Data)
 * [Technologies Used](#technologies-used)
     * [Languages Used](#languages-used)
     * [Python Packages](#Python-Packages)
     * [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
 * [Testing](#testing)
-    * [PEP 8 Online](#PEP-8-Online)
+    * [CI Python LinterEP8](#CI-Python-LinterEP8)
     * [Lighthouse](#Lighthouse)
     * [Functionality](#Functionality)
     * [Bugs](Bugs
@@ -47,7 +46,6 @@ This project was created by myself to show a simple game using python and ran th
     * [Forking this Project](#forking-this-project)
     * [Cloning this Project](#cloning-this-project)
 * [Credits](#credits)
-* [Content](#content)
 ## User Experience - UX
 
 ### User Stories
@@ -224,7 +222,7 @@ The player has 8 lives[5] in which he must slect a letter or guess the word the 
 
 ## Testing
 
-### PEP 8 Online
+### CI Python LinterEP8
 
 The [CI Python LinterEP8](https://pep8ci.herokuapp.com/) This linter is a Code Institute designed app to verify python code.
 
@@ -234,7 +232,7 @@ The [CI Python LinterEP8](https://pep8ci.herokuapp.com/) This linter is a Code I
   
 ### Lighthouse 
 
- Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on the Desktop.
+ Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website. 
 
 * Desktop Results:
 
