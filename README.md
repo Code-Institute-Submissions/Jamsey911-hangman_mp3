@@ -166,25 +166,28 @@ A confirmation message is displayed over the hangman image once a leeter or word
 
 ### Menu Options
 
-![Menu Options](./assets/images/readme/hangman-menu.jpg)
+![Menu Options](./assets/images/features/hm-options.png)
 * In the end of the game users will have access to the menu where they can choose from these options: <br>
 [A] - Play Game <br>
 [B] - Game Rules <br>
 [C] - Exit Game
 
-### Leaderboard
-![Game Rules](./assets/images/readme/hangman-leaderboard.jpg)
+### Game Rules
+![Game Rules](./assets/images/features/hm-rules.png)
 * The Leaderboard shows the 15 players with the best scores.
 
 ### Exit Game
-![Exit Game](./assets/images/readme/hangman-exit-game.jpg)
+![Exit Game](./assets/images/features/hm-exit.png)
 * The players will see this message if they will chose to exit the game by typing [C].
 
 ### How to Play
-![How to Play](./assets/images/readme/hangman-explanation-1.jpg)<br>
-![How to Play](./assets/images/readme/hangman-message-back.jpg)<br>
-The player has 7 attempts to try to guess the right word by inputting letters or can try to input all the letters to correctly complete the full . The word is randomly chosen by the computer from a list.
-* When the game starts the player can see how many letters are in the word [1] and the computer will ask the player to input a letter or a word [7].
+![How to Play](./assets/images/how_to/hm-how-to-1.png)<br>
+![How to Play](./assets/images/how_to/hm-how-to-2.png)<br>
+![How to Play](./assets/images/how_to/hm-how-to-3.png)<br>
+![How to Play](./assets/images/how_to/hm-how-to-4.png)<br>
+![How to Play](./assets/images/how_to/hm-how-to-5.png)<br>
+The player has 8 lives[5] in which he must slect a letter or guess the word the computer has randamly selected. This list is under data.txt. 
+<!-- * The player can see how many letters are in the word[4] by the spaces displayed. and the computer will ask the player to input a letter or a word [7]. -->
 * If the player guesses the right letter, they will see a message from the computer [8] the letter guessed displayed in the word length [3], the hangman stage will remain the same [2] and the score will increase by 25 points [5]
 * If the player guesses a wrong letter, they will see a message from the computer [9] the letter guessed displayed in the wrong letters guesses [4], the hangman stage will turn to the next stage [2] and the number of attempts will decrease by 1 [6]
 * When the player types an invalid input, they will see a message from the computer [10].
