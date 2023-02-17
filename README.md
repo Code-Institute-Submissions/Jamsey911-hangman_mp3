@@ -17,7 +17,7 @@ This project was created by myself to show a simple game using python and ran th
 * [Logic](#logic)
      * [Flowcharts](#flowcharts)
 
-* Game Features
+* [Game Features](#Game-Features)
     * [Logo and Game Options](#Logo-and-Game-Options) 
     * [Hangman Stage 1](#Hangman-Stage-1)
     * [Hangman Stage 2](#Hangman-Stage-2) 
@@ -41,7 +41,7 @@ This project was created by myself to show a simple game using python and ran th
     * [CI Python LinterEP8](#CI-Python-LinterEP8)
     * [Lighthouse](#Lighthouse)
     * [Functionality](#Functionality)
-    * [Bugs](Bugs
+    * [Bugs](#Bugs)
 * [Deploying this Project](#deployment-this-project)
     * [Forking this Project](#forking-this-project)
     * [Cloning this Project](#cloning-this-project)
@@ -165,17 +165,17 @@ A confirmation message is displayed over the hangman image once a leeter or word
 ### Menu Options
 
 ![Menu Options](./assets/images/features/hm-options.png)
-* In the end of the game users will have access to the menu where they can choose from these options: <br>
+* At the start and end of a game, users will have access to the menu where they can choose from these options: <br>
 [A] - Play Game <br>
 [B] - Game Rules <br>
 [C] - Exit Game
 
 ### Game Rules
-![Game Rules](./assets/images/features/hm-rules.png)
-* The Leaderboard shows the 15 players with the best scores.
+![Game Rules](./assets/images/features/hm-rules-2.png)
+* The game rules appears will the user selects [B].
 
 ### Exit Game
-![Exit Game](./assets/images/features/hm-exit.png)
+![Exit Game](./assets/images/features/hm-exit-2.png)
 * The players will see this message if they will chose to exit the game by typing [C].
 
 ### How to Play
@@ -185,15 +185,17 @@ A confirmation message is displayed over the hangman image once a leeter or word
 ![How to Play](./assets/images/how_to/hm-how-to-4.png)<br>
 ![How to Play](./assets/images/how_to/hm-how-to-5.png)<br>
 ![How to Play](./assets/images/how_to/hm-bonus.png)<br>
+![Hangman Stage 9 - Win](./assets/images/features/hm-end-game-win.png)<br>
+![Hangman Stage 9 - Win](./assets/images/features/hm-end-game-lose.png)<br>
 * On opening a game, the user will see a prompt welcoming them to the game[1]
 The player has 8 lives[5] in which he must slect a letter or guess the word the computer has randamly selected. This list is under data.txt. 
 * The player can see how many letters are in the word[4] by the spaces displayed. The computer will ask the player to input a letter or a word [7],[6].
 * If the user guesses a correct letter, they will see a message from the computer [7] the letter guessed displayed in the word length [4], the hangman stage will remain the same [2].
 * If the user guesses an incorrect letter, a message from the computer [9] will display and the incorrect letter will be added to the incorrect letter list [3], the hangman stage will turn to the next stage [2] and the number of guesses will increase by 1 [5]
 * When the player types an invalid input, they will see a message from the computer [8].
-* When the user guesses the right word they will see a prompt notification along with the total score[10]![Hangman Stage 9 - Win](./assets/images/features/hm-end-game-win.png)
+* When the user guesses the right word they will see a prompt notification along with the total score[10]!
 * If the user guessed the full word at once, they will win recive an extra 300 points feature[11]
-* 8 letters incorrectly and the player will see a notifcation that they have lost.![Hangman Stage 9 - Win](./assets/images/features/hm-end-game-lose.png)
+* 8 letters incorrectly guessed and the player will see a notifcation that they have lost.!
 
 ## Technologies Used
 ### Languages Used 
@@ -302,7 +304,7 @@ The [CI Python LinterEP8](https://pep8ci.herokuapp.com/) This linter is a Code I
 
 ### Design Images
 - [Hangman Logo Design](./assets/images/features/hm-home_screen.png): Design by <a href="https://replit.com/@SwaritChoudhari"> Swarit Choudhari </a>found in:<a href="https://replit.com/talk/share/Hangman-With-Graphics/115862">Replit</a>
-- [Rules Design](./assets/images/features/hm-rules.png): Design by <a href="https://github.com/PedroCristo/portfolio_project_3/commits?author=PedroCristo">PedroCristo </a> found in <a href="https://portfolio-project-3.herokuapp.com/">Hangman Website</a>
+- [Rules Design](./assets/images/features/hm-rules-2.png): Design by <a href="https://github.com/PedroCristo/portfolio_project_3/commits?author=PedroCristo">PedroCristo </a> found in <a href="https://portfolio-project-3.herokuapp.com/">Hangman Website</a>
 
 
 ### Code
