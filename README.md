@@ -159,12 +159,12 @@ A confirmation message is displayed over the hangman image once a leeter or word
 ### Hangman Stage 9/Lose
 
 ![Hangman Stage 9 - Lose](./assets/images/features/hm-end-game-lose.png)
-* When the player guesses a eigth letter or word which is not in the word, the hamgman design is fully complete and The display colour stays red.
+* When the player guesses a eigth letter or word which is not in the word, the hamgman design is fully complete, the display colour stays red and a lose notifation appears.
 
 ### Hangman Stage 9/Win
 
 ![Hangman Stage 9 - Win](./assets/images/features/hm-end-game-win.png)
-* If the player guessed the full word, they have won the game. When this happens, a prompt that the user has won along with the total points for the game.
+* If the player guessed the full word, they have won the game. When this happens, a prompt that the user has won appearing in green along with the total points for the game.
 
 ### Menu Options
 
