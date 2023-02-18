@@ -6,7 +6,7 @@ This project was created by myself to show a simple game using python and ran th
 
 [Live Project Here](https://hang-man-mp3.herokuapp.com/)
 
-<p align="center"><img src="./assets/images/testing/am_i_respon_hm.png" alt="Hangman game webpage on multiple devices"></p>
+<p><img src="./assets/images/testing/am_i_respon_hm.png" alt="Hangman game webpage on multiple devices"></p>
 
 ## README Table Content
 
@@ -78,7 +78,7 @@ The colours in the game are supplied by the Python Colorama Model
 
 ### Flowcharts 
 ![Flowchart](./assets/images/flowchart.png)<br>
-I spent time planning and thinking about the logic and flow behind the game to ensure I had a general idea of how it could be built. I created flowcharts to assist me with the logical flow throughout the application. The charts were generated using [Lucidchart](https://lucid.app/) Integration and are shown below.<br>
+ I created a flowchart to help me identify essential steps to give me a better viw of the project will look. I created this using [Lucidchart](https://lucid.app/) Integration and are shown below.<br>
 
 ## Features
 
@@ -194,7 +194,8 @@ The player has 8 lives[5] in which he must slect a letter or guess the word the 
 * If the user guesses an incorrect letter, a message from the computer [9] will display and the incorrect letter will be added to the incorrect letter list [3], the hangman stage will turn to the next stage [2] and the number of guesses will increase by 1 [5]
 * When the player types an invalid input, they will see a message from the computer [8].
 * When the user guesses the right word they will see a prompt notification along with the total score[10]!
-* If the user guessed the full word at once, they will win recive an extra 300 points feature[11]
+* If a player has guessed a letter correctly, they will recive 25 point[11]
+* If the user guessed the full word at once, they will win recive an extra 300 points[11]
 * 8 letters incorrectly guessed and the player will see a notifcation that they have lost.!
 
 ## Technologies Used
@@ -262,43 +263,35 @@ The [CI Python LinterEP8](https://pep8ci.herokuapp.com/) This linter is a Code I
 * This site was deployed by completing the following steps:
 
 1. Log in to [Heroku](https://id.heroku.com) or create an account
-2. On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
-3. You must enter a unique app name
-4. Next select your region
-5. Click on the Create App button
-6. The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
-7. Click Reveal Config Vars and enter port into the Key box and 8000 into the Value box and click the Add button
-8. Click Reveal Config Vars again and enter CREDS into the Key box and the Google credentials into the Value box
-9. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
-10. Repeat step 8 to add node.js. o Note: The Buildpacks must be in the correct order. If not click and drag them to move into the correct order
-11. Scroll to the top of the page and choose the Deploy tab
-12. Select Github as the deployment method
-13. Confirm you want to connect to GitHub
-14. Search for the repository name and click the connect button
-15. Scroll to the bottom of the deploy page and select the preferred deployment type
-16. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+2. On the main page click the "New" in the top right corner and select Create New App from the drop dwon menu
+3. No name can be duplicated so choose an original title
+4. Choose the region where you are based
+5. Click the create new app input
+6. Choose the settings Tab then select config vars to enter in values
+7. Click Reveal Config Vars and choose a port for the key label, 8000 for the value labal and then choose add.  
+8. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
+9. Click add buildpacks and selct heroku/python and node.js(Must be in this order, they can be clicked and dragged if they need to be changed)
+10. Next select the deploy tab near the top of the page
+11. Choose Github as the deployment method
+12. Select the repository name and then the connect button
+13. At the bottom of the deploy page, select the preferred deployment type (Enable Automatic Deploys for automatic deployment or deploy from branch to push the deployment manually)
 
 ## Forking This Project
 
 * Fork this project by following the steps:
-
-1. Open [GitHub](https://github.com/)
-2. Click on the project to be forked
-3. Find the Fork button at the top right of the page
-4. Once you click the button the fork will be in your repository
+You can for fork the repository by following these steps:
+1. From the GitHub repository
+2. Click the Fork button on the upper right hand corner
 
 ## Cloning This Project
 
-* Clone this project by following the steps:
-  
-1. Open [GitHub](https://github.com/)
-2. Click on the project to be cloned
-3. You will be provided with three options to choose from, HTTPS, SSH, or GitHub CLI, click the clipboard icon in order to copy the URL
-4. Once you click the button the fork will be in your repository
-5. Open a new terminal
-6. Change the current working directory to the location that you want the cloned directory
-7. Type git clone and paste the URL copied in step 3
-8. Press Enter and the project is cloned
+* You can clone the repository by following these steps:
+1. From the GitHub repository 
+2. Select the Code button on top of the list of files
+3. Choose your prefeared option to clone HTTPS, SSH, or Github CLI. Select the copy button to copy the URL to your clipboard
+4. Open Git Bash and edit the current working directory to the one where you want the copied directory
+5. Type git clone and paste in URL that you copied ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+6. Next click enter and you will have your local clone
 
 ## Credits
 
