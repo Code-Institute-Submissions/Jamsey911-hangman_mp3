@@ -37,7 +37,7 @@ def select_word():
     my_word = "a"
     # makes sure word is at least 3 letters long
     while len(my_word) < 3:
-        # Strips down word 
+        # Strips down word
         my_word = random.choice(words)
         my_word = str(my_word).strip("[]")
         my_word = str(my_word).strip("\n")
@@ -52,7 +52,7 @@ def main_game():
     word = select_word()
     # Lives generated for user to abide by
     lives = len(design.HANGMAN) - 1
-    # Changes letters display to a hyphen 
+    # Changes letters display to a hyphen
     current_guess = "-" * len(word)
     # Wrong guess counter
     wrong_guesses = 0

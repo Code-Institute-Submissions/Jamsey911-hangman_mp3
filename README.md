@@ -1,8 +1,9 @@
 # Hangman - Game
 
 # Introduction
+
 Project milestone 3 for Code Institute Full-stack development program: Python Terminal.<br><brZ>
-This project was created by myself to show a simple game using python and ran through heroku. The main goal of the game is to guess letters in order to find the word that the computer randomly selects. 
+This project was created by myself to show a simple game using python and it's ran through heroku. The main goal of the game is to guess letters in order to find the word that the computer randomly selects. 
 
 [Live Project Here](https://hang-man-mp3.herokuapp.com/)
 
@@ -14,9 +15,7 @@ This project was created by myself to show a simple game using python and ran th
 * [User Experience UX](#user-experience---UX)
 * [Design](#Design)
     * [Colours](#Colours)
-* [Logic](#logic)
-     * [Flowcharts](#flowcharts)
-
+* [Flowchart](#flowchart)
 * [Game Features](#Game-Features)
     * [Logo and Game Options](#Logo-and-Game-Options) 
     * [Hangman Stage 1](#Hangman-Stage-1)
@@ -52,7 +51,7 @@ This project was created by myself to show a simple game using python and ran th
 
 * As a website creator, I want to:
   
-1. I want to build an game to navigate.
+1. I want to build a game that is easy to navigate.
 2. I want to build a simple game to understand.
 3. I want to build a game with images being visible which changes when the user progresses
 4. I want to build a game that keeps score
@@ -73,12 +72,14 @@ This project was created by myself to show a simple game using python and ran th
 ## Design
 
 #### Colours
-* A Sort red was chosen as a background to make the app stand out from the page and Python Colorama Model was installed in which some simple colours were chosen to make the app more visually appealing.
+
+* A Soft red was chosen as a background to make the app stand out from the page and Python Colorama Model was installed in which some simple colours were chosen to make the app more visually appealing.
 The colours in the game are supplied by the Python Colorama Model
 
-### Flowcharts 
+## Flowcharts 
+
 ![Flowchart](./assets/images/flowchart.png)<br>
- I created a flowchart to help me identify essential steps to give me a better viw of the project will look. I created this using [Lucidchart](https://lucid.app/) Integration and are shown below.<br>
+ I created a flowchart to help me identify essential steps to give me a better viw of how the project will look. I created this using [Lucidchart](https://lucid.app/) Integration and are shown below.<br>
 
 ## Features
 
@@ -86,25 +87,28 @@ The colours in the game are supplied by the Python Colorama Model
 
 ![Logo and Game options menu](./assets/images/features/hm-home_screen.png)
 
-* When opening the app, the user will be shown the a logo along along with the 
+* When opening the app, the user will be shown the logo along with the 
 Game Options menu. <br>
 
 ### Play Game
 
-![Ask Player Name and City](./assets/images/features/hm-play-game.png)
-* After the player sees the intro feature, the computer will ask the user's to input their name and city.<br>
+![Play Game](./assets/images/features/hm-play-game.png)
+* Selecting Play Game starts a new game.<br>
 
 ### Rules
-![Empty Input for Name and City](./assets/images/features/hm-rules.png)
-* If the player does not input their name and city, this alert will appear.<br>
+
+![Game Rules](./assets/images/features/hm-rules.png)
+* The Games Rules selection takes you to an image of all rules required to play the game.<br>
 
 ### Close Game
-![Welcome Message and Game Rules](./assets/images/features/hm-exit.png)
-* After the user inputs their name and city, the program will display the welcome message and the game rules. The player then presses any key to start the game.<br>
+
+![Close Game](./assets/images/features/hm-exit.png)
+* Choosing Close game closes the game securely.<br>
 
 ## Game Features
 
 ### Hangman Stage 1
+
 ![Game Feature](./assets/images/features/hm-stage-1.png)<br><br>
 
 A welcome message along with prompt to guess the word. The Hangman design is placed below the welcome prompt. The user then has a list of information to assist with the game. They are as foolow:
@@ -114,7 +118,7 @@ A welcome message along with prompt to guess the word. The Hangman design is pla
 * A prompt to have a guess
 * An Input to guess a letter or the full word
 
-A confirmation message is displayed over the hangman image once a leeter or word is selected. This is displayed as green for a correct letter or word, red for an incorrect letter or word and white for an invalid input.
+A confirmation message is displayed over the hangman image once a leeter or word is selected. This is displayed as green for a correct letter, red for an incorrect letter and white for an invalid input.
 
 ### Hangman Stage 2 
 
@@ -165,20 +169,23 @@ A confirmation message is displayed over the hangman image once a leeter or word
 ### Menu Options
 
 ![Menu Options](./assets/images/features/hm-options.png)
-* At the start and end of a game, users will have access to the menu where they can choose from these options: <br>
+* When opening the app and when a game is completed, users will have access to the menu where they can choose from the displayed options: <br>
 [A] - Play Game <br>
 [B] - Game Rules <br>
 [C] - Exit Game
 
 ### Game Rules
+
 ![Game Rules](./assets/images/features/hm-rules-2.png)
-* The game rules appears will the user selects [B].
+* The game rules appears when the user selects [B].
 
 ### Exit Game
+
 ![Exit Game](./assets/images/features/hm-exit-2.png)
 * The players will see this message if they will chose to exit the game by typing [C].
 
 ### How to Play
+
 ![How to Play](./assets/images/how_to/hm-how-to-1.png)<br>
 ![How to Play](./assets/images/how_to/hm-how-to-2.png)<br>
 ![How to Play](./assets/images/how_to/hm-how-to-3.png)<br>
@@ -199,6 +206,7 @@ The player has 8 lives[5] in which he must slect a letter or guess the word the 
 * 8 letters incorrectly guessed and the player will see a notifcation that they have lost.!
 
 ## Technologies Used
+
 ### Languages Used 
 
 * [Python](https://www.python.org/)
@@ -221,7 +229,6 @@ The player has 8 lives[5] in which he must slect a letter or guess the word the 
     * Lucidchart was used to create the flowchart
 * [CI Python LinterEP8](https://pep8ci.herokuapp.com/)
     * The PEP8 was used to validate all the Python code
-
 
 ## Testing
 
@@ -247,7 +254,7 @@ The [CI Python LinterEP8](https://pep8ci.herokuapp.com/) This linter is a Code I
 * All game rules come back with no errors
 * All statements print correctly
 * Correct values are displayed when a game is completed
-* Rules option displays wit no issues
+* Rules option displays with no issues
 * No issue can be found and game works as expected
 
 ## Bugs 
@@ -255,8 +262,8 @@ The [CI Python LinterEP8](https://pep8ci.herokuapp.com/) This linter is a Code I
 | **Bug** | **Fix** |
 | ----------- | ----------- |
 | Random word not changing after first completed game | Defined a function for the word to be refreshed correctly |
-| Rules design image not displaying correctly | Added as list in error  |
-| Favicon not appearing | Changed location to a hyperlink refrence    |
+| Rules design image not displaying correctly | Added as list in error |
+| Favicon not appearing | Changed location to a hyperlink refrence |
 
 ## Deploying this Project
 
@@ -296,11 +303,13 @@ You can for fork the repository by following these steps:
 ## Credits
 
 ### Design Images
+
 - [Hangman Logo Design](./assets/images/features/hm-home_screen.png): Design by <a href="https://replit.com/@SwaritChoudhari"> Swarit Choudhari </a>found in:<a href="https://replit.com/talk/share/Hangman-With-Graphics/115862">Replit</a>
 - [Rules Design](./assets/images/features/hm-rules-2.png): Design by <a href="https://github.com/PedroCristo/portfolio_project_3/commits?author=PedroCristo">PedroCristo </a> found in <a href="https://portfolio-project-3.herokuapp.com/">Hangman Website</a>
 
 
 ### Code
+
 - The inital code was adapted from MJ Codes in his python tutorials video: [Python Hangman](https://www.youtube.com/watch?v=wmSysRui0cI)
 - The words i used to randomize were copied from the website trinket.io: [Put Interactive Python Anywhere on the Web](https://trinket.io/python/99f458ee11)
 - My README.md was based off the template illastrated by [PedroCristo](https://github.com/PedroCristo/portfolio_project_3)
