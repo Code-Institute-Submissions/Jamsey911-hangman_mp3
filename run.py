@@ -67,7 +67,7 @@ def main_game():
     # Checks how many lives reamin
     while wrong_guesses < lives and current_guess != word:
         print(design.HANGMAN[wrong_guesses])
-        print("  You've used the following letters: ", 
+        print("  You've used the following letters: ",
               "\n ", used_letters,
               "\n  So far, the word is:", current_guess,
               "\n  You have", wrong_guesses, "of 8 guesses left")
