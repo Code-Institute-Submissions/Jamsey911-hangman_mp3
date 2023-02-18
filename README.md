@@ -77,8 +77,8 @@ This project was created by myself to show a simple game using python and ran th
 The colours in the game are supplied by the Python Colorama Model
 
 ### Flowcharts 
-<!-- ![Flowcharts](./assets/images/readme/hangman-flowcharts.jpg)<br>
-I spent time planning and thinking about the logic and flow behind the game to ensure I had a general idea of how it could be built. I created flowcharts to assist me with the logical flow throughout the application. The charts were generated using [Lucidchart](https://lucid.app/) Integration and are shown below.<br> -->
+![Flowchart](./assets/images/flowchart.png)<br>
+I spent time planning and thinking about the logic and flow behind the game to ensure I had a general idea of how it could be built. I created flowcharts to assist me with the logical flow throughout the application. The charts were generated using [Lucidchart](https://lucid.app/) Integration and are shown below.<br>
 
 ## Features
 
